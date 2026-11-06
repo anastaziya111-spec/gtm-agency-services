@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4ef">
+  <title>GTM Systems Architecture | Interactive Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/work.css">
+</head>
+<body>
+  <header class="page-header"><div class="wrap page-header-inner">
+    <a class="page-brand" href="../index.html" aria-label="GTM practice home"><span class="page-brand-mark">G</span><span>GTM <small>practice</small></span></a>
+    <nav class="page-nav" aria-label="Main navigation"><a href="../index.html#capabilities">Services</a><a href="../index.html#selected-work">Selected work</a><a class="nav-pill" href="../index.html#contact">Let's talk <span>↗</span></a></nav>
+  </div></header>
+  <main class="page-main">
+    <section class="page-hero">
+      <a class="back-link" href="../index.html#selected-work"><span>←</span> Selected work</a>
+      <div class="sample-banner" style="margin-top:28px">Illustrative Sample Data · Workflow and records are conceptual examples</div>
+      <p class="eyebrow">Interactive demonstration 03 · Systems engineering</p>
+      <h1 class="page-title">A connected system<br><span>for commercial execution.</span></h1>
+      <p class="page-lead">Explore how market signals become account priorities, how priorities become coordinated sales activity, and how CRM data and analytics feed back into the next decision.</p>
+      <div class="meta-row"><span class="meta-chip">7 connected components</span><span class="meta-chip">Shared account record</span><span class="meta-chip">Feedback loops</span></div>
+    </section>
+
+    <div class="demo-toolbar"><div><p class="eyebrow" style="margin:0 0 5px">GTM systems map</p><div style="font-size:12px;color:#59645b">Select a component to inspect its operating logic</div></div><span class="demo-status">Interactive architecture</span></div>
+
+    <div class="architecture-board" id="architecture-app">
+      <div class="architecture-flow" role="group" aria-label="Commercial system components">
+        <div class="arch-node-wrap"><button class="arch-node" type="button" data-node="0" aria-pressed="true"><small>01</small><strong>Signal<br>detection</strong><em>Find timing</em></button></div>
+        <div class="arch-node-wrap"><button class="arch-node" type="button" data-node="1" aria-pressed="false"><small>02</small><strong>Research &<br>enrichment</strong><em>Add context</em></button></div>
+        <div class="arch-node-wrap"><button class="arch-node" type="button" data-node="2" aria-pressed="false"><small>03</small><strong>Account<br>scoring</strong><em>Set priority</em></button></div>
+        <div class="arch-node-wrap"><button class="arch-node" type="button" data-node="3" aria-pressed="false"><small>04</small><strong>ICP<br>qualification</strong><em>Check fit</em></button></div>
+        <div class="arch-node-wrap"><button class="arch-node" type="button" data-node="4" aria-pressed="false"><small>05</small><strong>Outbound<br>/ ABM</strong><em>Activate</em></button></div>
+        <div class="arch-node-wrap"><button class="arch-node" type="button" data-node="5" aria-pressed="false"><small>06</small><strong>CRM &<br>pipeline</strong><em>Record</em></button></div>
+        <div class="arch-node-wrap"><button class="arch-node" type="button" data-node="6" aria-pressed="false"><small>07</small><strong>Analytics &<br>optimisation</strong><em>Learn</em></button></div>
+      </div>
+      <div class="arch-feedback"><span>Feedback from analytics informs scoring, ICP rules and channel choices</span></div>
+      <div class="arch-detail" aria-live="polite">
+        <div><p class="eyebrow" id="arch-index" style="color:#a9bbaa;margin:0 0 12px">Component 01</p><h2 id="arch-title">Signal detection</h2><p class="detail-purpose" id="arch-purpose">Identify events that create a reason to review an account now.</p></div>
+        <div class="arch-detail-grid">
+          <div><h3>Inputs</h3><p id="arch-inputs"></p></div>
+          <div><h3>Process</h3><p id="arch-process"></p></div>
+          <div><h3>Outputs</h3><p id="arch-outputs"></p></div>
+          <div><h3>Business application</h3><p id="arch-application"></p></div>
+        </div>
+      </div>
+      <div class="arch-context"><strong>Operating principle</strong><span id="arch-context">A signal is not a lead. It is a reason to enrich an account, check relevance and decide whether an action is justified.</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px">
+        <button class="control-reset" id="arch-prev" type="button">← Previous component</button>
+        <button class="control-reset" id="feedback-toggle" type="button" aria-pressed="false">Show feedback loop</button>
+        <button class="pill-button" id="arch-next" type="button">Next component <span>→</span></button>
+      </div>
+      <div class="demo-grid" id="feedback-panel" hidden style="margin-top:13px">
+        <article class="demo-card"><span class="card-kicker">Feedback path 01</span><h3>Analytics → scoring</h3><p>Conversion, disqualification and opportunity outcomes recalibrate which account attributes predict commercial progression.</p></article>
+        <article class="demo-card"><span class="card-kicker">Feedback path 02</span><h3>Analytics → ICP and channels</h3><p>Win/loss evidence, buyer objections and channel-level outcomes update segment priorities, messages and budget decisions.</p></article>
+      </div>
+    </div>
+
+    <section class="page-section">
+      <div class="section-heading"><div><p class="eyebrow">Shared data model</p><h2>Every stage should leave a usable record.</h2></div><p>The account record should preserve source evidence, fit, intent, buyer roles, activity, opportunity stage and outcomes. That continuity makes it possible to audit why an account was prioritised and what happened after activation.</p></div>
+      <div class="demo-grid">
+        <article class="demo-card"><span class="card-kicker">Identity</span><h3>Account and contact</h3><p>Canonical company, domain, location, parent relationship, contact identity and buying-group role.</p></article>
+        <article class="demo-card"><span class="card-kicker">Evidence</span><h3>Source and timestamp</h3><p>Where a signal or firmographic fact came from, when it was captured and how confident the system is.</p></article>
+        <article class="demo-card"><span class="card-kicker">Decision</span><h3>Score and qualification</h3><p>Fit and intent inputs, score rationale, ICP status, disqualification reason and assigned owner.</p></article>
+        <article class="demo-card"><span class="card-kicker">Outcome</span><h3>Pipeline and feedback</h3><p>Touch history, meeting status, opportunity movement, closed outcome, objections and next action.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer"><div class="page-footer-inner"><span class="page-footer-brand">GTM practice</span><span>Illustrative system design · No live integrations connected</span><a href="../index.html#selected-work">Back to selected work ↑</a></div></footer>
+
+  <script>
+    (() => {
+      const components = [
+        {title:'Signal detection',purpose:'Identify events that create a reason to review an account now.',inputs:'Job postings, funding and ownership changes, facility expansion, executive moves, technology announcements, regulatory events and first-party engagement.',process:'Collect from approved sources, resolve the company entity, classify the event, capture date and source, remove duplicates and assign a confidence level.',outputs:'A normalised signal record linked to an account, including event type, source, timestamp, confidence and potential relevance.',application:'Give research and sales teams a timely reason to investigate an account and shape a relevant first conversation.',context:'A signal is not a lead. It is a reason to enrich an account, check relevance and decide whether an action is justified.'},
+        {title:'Research & enrichment',purpose:'Turn a signal and a company name into a usable account record.',inputs:'Company domain, public company information, signal record, existing CRM data, technology clues and available contact information.',process:'Resolve entity and parent company, enrich firmographics, locations, products, operating model, technology context and likely buying-group roles. Validate important facts against sources.',outputs:'Enriched account profile with source references, confidence, missing fields and an initial buying-group map.',application:'Give sales and marketing enough context to decide whether an account belongs in the target universe and who should be involved.',context:'Enrichment should improve the record, not create false certainty. Keep source and confidence next to material facts.'},
+        {title:'Account scoring',purpose:'Rank accounts using fit, intent and practical reachability.',inputs:'Enriched account attributes, ICP profile, current signals, engagement history, exclusions and capacity constraints.',process:'Apply a weighted scoring model, record the contribution of each factor, apply threshold rules and recalculate when evidence changes.',outputs:'Prioritised account queue, score rationale, priority tier and recommended research or sales action.',application:'Direct limited research and sales capacity toward accounts with a stronger combination of fit and buying timing.',context:'A score is a prioritisation aid, not an automated buying decision. Reps need to see why the account received its score.'},
+        {title:'ICP qualification',purpose:'Check whether the account and buying context meet the commercial definition of a good opportunity.',inputs:'Account score, company profile, buyer roles, discovery responses, use case, urgency, buying process and disqualification rules.',process:'Confirm segment and problem fit, identify a business owner, test urgency and route, record constraints and resolve missing qualification data.',outputs:'Qualified account, nurture status or disqualification reason; validated buying group and qualification notes.',application:'Create a shared definition of quality across marketing, business development and sales before pipeline reporting begins.',context:'Fit and qualification are related but different. A high-scoring account still needs a real problem, owner and plausible buying path.'},
+        {title:'Outbound / ABM',purpose:'Activate a relevant, coordinated approach to the account and its buying group.',inputs:'Qualified account, account insight, buying signal, mapped contacts, message hypothesis, channel permissions and campaign rules.',process:'Select the right contact sequence, personalise around the trigger and problem, coordinate sales outreach with paid or content touches, capture responses and objections.',outputs:'Account engagement, replies, meetings, content interactions, objections and a clear next action.',application:'Turn account intelligence into a conversation that reflects the buyer’s context rather than a generic campaign sequence.',context:'Activity is not evidence of demand. Optimise around qualified conversations, buying-group engagement and progression.'},
+        {title:'CRM & pipeline',purpose:'Keep one reliable operational record of accounts, contacts, activities and opportunities.',inputs:'Enriched account records, campaign touches, replies, meeting outcomes, qualification decisions and opportunity updates.',process:'Deduplicate records, map account-contact relationships, enforce required fields, maintain stages and ownership, automate handoffs and task creation.',outputs:'Structured CRM records, traceable source history, stage progression, task queues and pipeline reporting inputs.',application:'Make handoffs visible, reduce manual re-entry and give the team one shared view of commercial progress.',context:'CRM is the system of record. Automation should update it with traceable events, not create parallel spreadsheets and hidden states.'},
+        {title:'Analytics & optimisation',purpose:'Understand which segments, signals, messages and channels create real commercial progress.',inputs:'CRM stages, activity records, campaign attribution, account scores, qualification outcomes, opportunity movement and closed-won / lost reasons.',process:'Connect sources, inspect funnel conversion and velocity by segment and channel, review quality and identify where assumptions fail.',outputs:'Performance views, learning notes, revised scoring weights, updated ICP rules, message changes and budget or capacity recommendations.',application:'Feed evidence back into research, targeting and execution so the commercial system improves with use.',context:'Analytics closes the loop. It should change the next prioritisation and execution decision, not simply report the last period.'}
+      ];
+      let active=0;
+      const nodes=[...document.querySelectorAll('[data-node]')];
+      function setNode(index){
+        active=(index+components.length)%components.length;
+        const d=components[active];
+        nodes.forEach((node,i)=>{
+          node.setAttribute('aria-pressed',String(i===active));
+          node.classList.toggle('is-upstream',i<active);
+          node.classList.toggle('is-downstream',i>active);
+        });
+        document.getElementById('arch-index').textContent='Component '+String(active+1).padStart(2,'0');
+        document.getElementById('arch-title').textContent=d.title;
+        document.getElementById('arch-purpose').textContent=d.purpose;
+        document.getElementById('arch-inputs').textContent=d.inputs;
+        document.getElementById('arch-process').textContent=d.process;
+        document.getElementById('arch-outputs').textContent=d.outputs;
+        document.getElementById('arch-application').textContent=d.application;
+        document.getElementById('arch-context').textContent=d.context;
+      }
+      nodes.forEach(node=>node.addEventListener('click',()=>setNode(+node.dataset.node)));
+      document.getElementById('arch-prev').addEventListener('click',()=>setNode(active-1));
+      document.getElementById('arch-next').addEventListener('click',()=>setNode(active+1));
+      const feedbackButton=document.getElementById('feedback-toggle');
+      const feedbackPanel=document.getElementById('feedback-panel');
+      feedbackButton.addEventListener('click',()=>{const open=feedbackPanel.hidden;feedbackPanel.hidden=!open;feedbackButton.setAttribute('aria-pressed',String(open));feedbackButton.textContent=open?'Hide feedback loop':'Show feedback loop';});
+      setNode(0);
+    })();
+  </script>
+</body>
+</html>

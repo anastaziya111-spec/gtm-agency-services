@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4ef">
+  <title>Market Intelligence Explorer | Interactive Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/work.css">
+</head>
+<body>
+  <header class="page-header"><div class="wrap page-header-inner">
+    <a class="page-brand" href="../index.html" aria-label="GTM practice home"><span class="page-brand-mark">G</span><span>GTM <small>practice</small></span></a>
+    <nav class="page-nav" aria-label="Main navigation"><a href="../index.html#capabilities">Services</a><a href="../index.html#selected-work">Selected work</a><a class="nav-pill" href="../index.html#contact">Let's talk <span>↗</span></a></nav>
+  </div></header>
+  <main class="page-main">
+    <section class="page-hero">
+      <a class="back-link" href="../index.html#selected-work"><span>←</span> Selected work</a>
+      <div class="sample-banner" style="margin-top:28px">Illustrative Sample Data · All companies, events and scores are fictional</div>
+      <p class="eyebrow">Interactive demonstration 02 · Market intelligence</p>
+      <h1 class="page-title">Research that leads<br><span>to a commercial decision.</span></h1>
+      <p class="page-lead">Explore a sample market, compare segments, inspect account-level signals and adjust the opportunity model. The interface shows how raw research can become a prioritised sales queue.</p>
+      <div class="meta-row"><span class="meta-chip">Market overview</span><span class="meta-chip">Account intelligence</span><span class="meta-chip">Buying signals</span><span class="meta-chip">Opportunity scoring</span></div>
+    </section>
+
+    <div class="demo-toolbar"><div><p class="eyebrow" style="margin:0 0 5px">Market intelligence workspace</p><div style="font-size:12px;color:#59645b">Industrial automation · Europe</div></div><span class="demo-status">Synthetic dataset</span></div>
+    <div class="demo-workspace" id="explorer-app">
+      <aside class="demo-sidebar" aria-label="Intelligence modules">
+        <p class="demo-side-label">Research modules</p>
+        <div class="demo-nav" role="tablist" aria-orientation="vertical">
+          <button type="button" role="tab" aria-selected="true" aria-controls="explore-overview" data-module="overview"><span class="nav-index">01</span>Market overview</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="explore-segments" data-module="segments"><span class="nav-index">02</span>Market segmentation</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="explore-competitors" data-module="competitors"><span class="nav-index">03</span>Competitive intelligence</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="explore-accounts" data-module="accounts"><span class="nav-index">04</span>Target account mapping</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="explore-signals" data-module="signals"><span class="nav-index">05</span>Buying signals</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="explore-scoring" data-module="scoring"><span class="nav-index">06</span>Opportunity scoring</button>
+        </div>
+      </aside>
+      <div class="demo-stage">
+        <div class="demo-stage-head"><div><h2 id="explorer-title">Market overview</h2><p id="explorer-subtitle">A first read on market structure, segments and potential demand signals.</p></div><span class="demo-status">Sample workspace</span></div>
+
+        <section class="demo-panel is-active" id="explore-overview" role="tabpanel" aria-label="Market overview">
+          <div class="metric-grid" id="market-metrics">
+            <div class="metric"><strong>8</strong><span>Sample accounts</span></div><div class="metric"><strong>4</strong><span>Market segments</span></div><div class="metric"><strong>3</strong><span>Regions covered</span></div><div class="metric"><strong>6</strong><span>Signal categories</span></div>
+          </div>
+          <div class="demo-grid">
+            <article class="demo-card"><span class="card-kicker">Market structure</span><h3>Four operational contexts</h3><p>Manufacturing, warehouse automation, robotics and industrial software. Each segment has different buying triggers and implementation complexity.</p><div id="overview-segments" style="display:grid;gap:10px;margin-top:15px"></div></article>
+            <article class="demo-card"><span class="card-kicker">Commercial question</span><h3>Where is the buying window opening?</h3><p>Prioritise accounts where fit, buying intent and access overlap. A high-fit account without a timely trigger may belong in nurture, not active outbound.</p><div class="case-note">Click a segment bar to open the account list with that segment selected.</div></article>
+          </div>
+          <div class="demo-card" style="margin-top:13px"><span class="card-kicker">Research to action</span><div class="decision-chain"><button class="chain-button" data-open-module="segments">Segment the market</button><span class="chain-arrow">→</span><button class="chain-button" data-open-module="signals">Read buying signals</button><span class="chain-arrow">→</span><button class="chain-button" data-open-module="accounts">Prioritise accounts</button><span class="chain-arrow">→</span><button class="chain-button" data-open-module="scoring">Adjust the score</button></div></div>
+        </section>
+
+        <section class="demo-panel" id="explore-segments" role="tabpanel" aria-label="Market segmentation" hidden>
+          <div class="demo-card" style="margin-bottom:13px"><span class="card-kicker">Segmentation logic</span><h3>Group accounts by operational problem and buying context.</h3><p>Segments in this sample are designed around the problem being solved, not just SIC codes or broad company labels.</p></div>
+          <div class="demo-grid" id="segment-cards">
+            <article class="demo-card"><span class="card-kicker">Segment</span><h3>Multi-site manufacturing</h3><p>Operational standardisation across multiple plants.</p></article>
+          </div>
+          <div class="case-note">Selecting a segment applies it to Target Account Mapping. Account names and all associated attributes are fictional.</div>
+        </section>
+
+        <section class="demo-panel" id="explore-competitors" role="tabpanel" aria-label="Competitive intelligence" hidden>
+          <div class="demo-card" style="margin-bottom:13px"><span class="card-kicker">Competitive intelligence</span><h3>Map vendors and the status quo as separate alternatives.</h3><p>Positioning is relative. The buyer may compare a specialist vendor, an existing system extension, an internal build or a manual workaround.</p></div>
+          <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Alternative</th><th>Type</th><th>Strength buyers may value</th><th>Question to investigate</th></tr></thead><tbody>
+            <tr><td><strong>PlantAxis</strong></td><td>MES platform · fictional</td><td>Deep shop-floor workflows</td><td>How well does it connect performance across plants?</td></tr>
+            <tr><td><strong>DockFlow</strong></td><td>Warehouse automation · fictional</td><td>Focused logistics functionality</td><td>Can it extend beyond warehouse use cases?</td></tr>
+            <tr><td><strong>WorkSpan Systems</strong></td><td>Workflow software · fictional</td><td>Flexible configuration</td><td>How much specialist implementation is required?</td></tr>
+            <tr><td><strong>Existing ERP + spreadsheets</strong></td><td>Status quo</td><td>Known tools and sunk cost</td><td>What is the measurable cost of fragmented execution?</td></tr>
+          </tbody></table></div>
+          <div class="demo-grid" style="margin-top:13px"><article class="demo-card"><span class="card-kicker">Research output</span><h3>Competitor record</h3><p>Category, target segment, core promise, product proof, integrations, pricing model, channel posture, customer evidence and known limitations.</p></article><article class="demo-card"><span class="card-kicker">Decision output</span><h3>Positioning implication</h3><p>Identify a problem where the offer is relevant and where the alternatives leave a meaningful gap. Verify the gap with buyers.</p></article></div>
+        </section>
+
+        <section class="demo-panel" id="explore-accounts" role="tabpanel" aria-label="Target account mapping" hidden>
+          <div class="explorer-controls">
+            <div class="control-field search-field"><label for="account-search">Find account</label><input id="account-search" type="search" placeholder="Company or keyword"></div>
+            <div class="control-field"><label for="account-segment">Segment</label><select id="account-segment"><option value="all">All segments</option><option value="Manufacturing">Manufacturing</option><option value="Warehouse automation">Warehouse automation</option><option value="Industrial robotics">Industrial robotics</option><option value="Industrial software">Industrial software</option></select></div>
+            <div class="control-field"><label for="account-region">Region</label><select id="account-region"><option value="all">All regions</option><option value="DACH">DACH</option><option value="Benelux">Benelux</option><option value="Nordics">Nordics</option><option value="UK & Ireland">UK & Ireland</option></select></div>
+            <div class="control-field"><label for="account-signal">Signal</label><select id="account-signal"><option value="all">Any signal</option><option value="Expansion">Expansion</option><option value="Hiring">Hiring</option><option value="Technology">Technology</option><option value="Funding">Funding</option><option value="Leadership">Leadership</option></select></div>
+            <button class="control-reset" id="reset-filters" type="button">Reset filters</button>
+          </div>
+          <div class="account-layout"><div><div style="display:flex;align-items:center;justify-content:space-between;gap:15px;margin:0 0 9px"><span class="eyebrow" style="margin:0">Account list</span><span class="small-note" id="account-count">8 accounts</span></div><div class="account-list" id="account-list" aria-live="polite"></div></div><aside class="account-detail" id="account-detail" aria-live="polite"><span class="card-kicker">Account profile</span><h3>Select a company</h3><p>Choose an account to inspect its profile, buying group, current signal and scoring inputs.</p></aside></div>
+        </section>
+
+        <section class="demo-panel" id="explore-signals" role="tabpanel" aria-label="Buying signals" hidden>
+          <div class="demo-card" style="margin-bottom:13px"><span class="card-kicker">Buying signals</span><h3>An event matters when it changes timing, need or access.</h3><p>Signals are only useful when tied to an account, a likely buying problem and a relevant next action.</p></div>
+          <div class="account-list" id="signal-list"></div>
+          <div class="case-note">Every event shown is fictional sample data. In a live system, source, timestamp, confidence and evidence link would be stored with each signal record.</div>
+        </section>
+
+        <section class="demo-panel" id="explore-scoring" role="tabpanel" aria-label="Opportunity scoring" hidden>
+          <div class="demo-card" style="margin-bottom:14px"><span class="card-kicker">Scoring model</span><h3>Change the weights to see how account priorities move.</h3><p>Illustrative composite score = fit × weight + intent × weight + reachability × weight. Adjusting weights recalculates each account ranking below.</p></div>
+          <div class="score-model">
+            <div class="score-weight"><label for="weight-fit">ICP fit <output id="fit-value">45%</output></label><input id="weight-fit" type="range" min="10" max="70" value="45"></div>
+            <div class="score-weight"><label for="weight-intent">Buying intent <output id="intent-value">35%</output></label><input id="weight-intent" type="range" min="10" max="70" value="35"></div>
+            <div class="score-weight"><label for="weight-reach">Reachability <output id="reach-value">20%</output></label><input id="weight-reach" type="range" min="10" max="70" value="20"></div>
+          </div>
+          <div class="case-note" id="weight-note">Weights are normalised to 100% automatically. This is a demonstration model, not a validated scoring policy.</div>
+          <div class="data-table-wrap" style="margin-top:14px"><table class="data-table"><thead><tr><th>Priority</th><th>Account</th><th>ICP fit</th><th>Intent</th><th>Reachability</th><th>Weighted score</th></tr></thead><tbody id="score-rows"></tbody></table></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer"><div class="page-footer-inner"><span class="page-footer-brand">GTM practice</span><span>Illustrative sample data · Fictional market and account records</span><a href="../index.html#selected-work">Back to selected work ↑</a></div></footer>
+
+  <script>
+    (() => {
+      const accounts = [
+        {id:'A-101',name:'Arbor Robotics',segment:'Industrial robotics',region:'DACH',employees:'1,200',fit:92,intent:84,reach:62,signals:['Expansion','Hiring'],signal:'New automation programme across two production sites',signalAge:'Recent',summary:'Industrial robotics integrator scaling a new deployment practice across manufacturing accounts.',buyers:'VP Operations · Head of Automation · CTO',next:'Map the automation programme owner and validate deployment timing.'},
+        {id:'A-102',name:'Westhaven Logistics',segment:'Warehouse automation',region:'Benelux',employees:'2,400',fit:86,intent:91,reach:78,signals:['Expansion','Hiring'],signal:'New fulfilment site and automation leadership vacancy',signalAge:'Recent',summary:'Regional logistics operator adding capacity and reviewing warehouse processes.',buyers:'COO · Director of Logistics · IT Director',next:'Lead with the site expansion and ask about automation planning.'},
+        {id:'A-103',name:'LumenForge Systems',segment:'Industrial robotics',region:'Nordics',employees:'760',fit:88,intent:68,reach:55,signals:['Technology'],signal:'Announced a new robotics integration partnership',signalAge:'This quarter',summary:'Industrial automation company extending its technical partner ecosystem.',buyers:'Managing Director · VP Engineering · Operations Lead',next:'Use partner mapping to identify a warm route into the account.'},
+        {id:'A-104',name:'Vela Process Group',segment:'Manufacturing',region:'UK & Ireland',employees:'3,100',fit:90,intent:73,reach:68,signals:['Leadership','Technology'],signal:'New Group Head of Operational Excellence appointed',signalAge:'Recent',summary:'Multi-site manufacturer with a central transformation function.',buyers:'COO · Head of OpEx · CIO',next:'Align message to the new leader’s transformation remit.'},
+        {id:'A-105',name:'Northpeak Automation',segment:'Manufacturing',region:'DACH',employees:'540',fit:82,intent:77,reach:84,signals:['Funding'],signal:'Growth investment announced for plant modernisation',signalAge:'This quarter',summary:'Mid-market manufacturer preparing a modernisation programme.',buyers:'CFO · Plant Director · IT Manager',next:'Qualify investment timing and identify the operational sponsor.'},
+        {id:'A-106',name:'Meridian Storage',segment:'Warehouse automation',region:'Benelux',employees:'980',fit:78,intent:58,reach:81,signals:['Hiring'],signal:'Hiring a warehouse systems programme manager',signalAge:'Recent',summary:'Distribution group building internal capacity for systems change.',buyers:'Head of Distribution · Systems Manager · CIO',next:'Nurture until a defined site or process initiative is confirmed.'},
+        {id:'A-107',name:'Ternion Industrial',segment:'Industrial software',region:'Nordics',employees:'1,700',fit:74,intent:86,reach:49,signals:['Technology','Expansion'],signal:'Announced a platform migration and regional expansion',signalAge:'This quarter',summary:'Industrial software provider expanding its product and data footprint.',buyers:'Chief Product Officer · CTO · COO',next:'Check if the platform migration creates a cross-functional workflow need.'},
+        {id:'A-108',name:'Cedarline Manufacturing',segment:'Manufacturing',region:'DACH',employees:'2,050',fit:89,intent:42,reach:72,signals:['Expansion'],signal:'Second facility under planning review',signalAge:'Early signal',summary:'Multi-site producer considering additional capacity.',buyers:'COO · VP Manufacturing · Finance Director',next:'Monitor planning progress before moving into an active sequence.'}
+      ];
+      const segmentInfo = [
+        {name:'Manufacturing',desc:'Multi-site operations, standardisation programmes and plant modernisation.',need:'Cross-site process visibility and execution consistency.',accountFit:'High relevance when the central operations team owns a measurable programme.'},
+        {name:'Warehouse automation',desc:'Distribution networks adding sites, automation and throughput capacity.',need:'Coordinate people, systems and operational workflows during expansion.',accountFit:'Strong when there is a defined facility or automation trigger.'},
+        {name:'Industrial robotics',desc:'Integrators and automation providers expanding deployment capability.',need:'Repeatable delivery workflows and better coordination between engineering and operations.',accountFit:'Validate whether the product buyer is an end user or an integration partner.'},
+        {name:'Industrial software',desc:'Technology providers changing platforms, data flows or customer operations.',need:'Integration and process orchestration across teams and systems.',accountFit:'Fit depends on product adjacency and the ability to access the operating buyer.'}
+      ];
+      const titles = {
+        overview:['Market overview','A first read on market structure, segments and potential demand signals.'],
+        segments:['Market segmentation','Group accounts by operational problem, buying trigger and ability to reach the buyer.'],
+        competitors:['Competitive intelligence','Map direct vendors, adjacent systems and the status quo.'],
+        accounts:['Target account mapping','Filter the account universe and inspect individual company records.'],
+        signals:['Buying signals','Connect observable events with timing, intent and an account-level next action.'],
+        scoring:['Opportunity scoring','Adjust the model and see which accounts become the highest commercial priority.']
+      };
+      let activeModule='overview';
+      let selectedId='A-101';
+      const moduleButtons=[...document.querySelectorAll('[data-module]')];
+      const modulePanels=[...document.querySelectorAll('.demo-panel[role="tabpanel"]')];
+      function openModule(key){
+        activeModule=key;
+        moduleButtons.forEach(b=>b.setAttribute('aria-selected',String(b.dataset.module===key)));
+        modulePanels.forEach(p=>{const active=p.id==='explore-'+key;p.classList.toggle('is-active',active);p.hidden=!active;});
+        document.getElementById('explorer-title').textContent=titles[key][0];
+        document.getElementById('explorer-subtitle').textContent=titles[key][1];
+        if(key==='accounts') renderAccounts();
+        if(key==='signals') renderSignals();
+        if(key==='scoring') renderScores();
+      }
+      moduleButtons.forEach(b=>b.addEventListener('click',()=>openModule(b.dataset.module)));
+      document.querySelectorAll('[data-open-module]').forEach(b=>b.addEventListener('click',()=>openModule(b.dataset.openModule)));
+      function renderOverview(){
+        const distinct=new Set(accounts.map(a=>a.region)).size;
+        document.getElementById('market-metrics').innerHTML=`<div class="metric"><strong>${accounts.length}</strong><span>Sample accounts</span></div><div class="metric"><strong>${segmentInfo.length}</strong><span>Market segments</span></div><div class="metric"><strong>${distinct}</strong><span>Regions covered</span></div><div class="metric"><strong>${new Set(accounts.flatMap(a=>a.signals)).size}</strong><span>Signal categories</span></div>`;
+        document.getElementById('overview-segments').innerHTML=segmentInfo.map(seg=>{const count=accounts.filter(a=>a.segment===seg.name).length;return `<button class="chain-button" style="display:flex;justify-content:space-between;width:100%;text-align:left" data-overview-segment="${seg.name}"><span>${seg.name}</span><strong>${count}</strong></button>`}).join('');
+        document.querySelectorAll('[data-overview-segment]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('account-segment').value=b.dataset.overviewSegment;openModule('accounts');}));
+      }
+      function renderSegments(){
+        document.getElementById('segment-cards').innerHTML=segmentInfo.map(seg=>{const count=accounts.filter(a=>a.segment===seg.name).length;const share=Math.round(count/accounts.length*100);return `<article class="demo-card"><span class="card-kicker">${count} sample accounts · ${share}% of sample</span><h3>${seg.name}</h3><p>${seg.desc}</p><div class="bar-track" style="margin:13px 0"><span style="width:${Math.max(12,share)}%"></span></div><p><strong>Need:</strong> ${seg.need}</p><p style="margin-top:7px"><strong>ICP note:</strong> ${seg.accountFit}</p><button class="control-reset" style="margin-top:13px" data-segment-pick="${seg.name}">View these accounts ↗</button></article>`}).join('');
+        document.querySelectorAll('[data-segment-pick]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('account-segment').value=b.dataset.segmentPick;openModule('accounts');}));
+      }
+      function currentWeights(){const fit=+document.getElementById('weight-fit').value,intent=+document.getElementById('weight-intent').value,reach=+document.getElementById('weight-reach').value,total=fit+intent+reach;return {fit:fit/total,intent:intent/total,reach:reach/total,raw:{fit,intent,reach}};}
+      function score(a){const w=currentWeights();return Math.round(a.fit*w.fit+a.intent*w.intent+a.reach*w.reach);}
+      function filteredAccounts(){
+        const term=(document.getElementById('account-search')?.value||'').trim().toLowerCase();
+        const seg=document.getElementById('account-segment')?.value||'all';
+        const region=document.getElementById('account-region')?.value||'all';
+        const signal=document.getElementById('account-signal')?.value||'all';
+        return accounts.filter(a=>(seg==='all'||a.segment===seg)&&(region==='all'||a.region===region)&&(signal==='all'||a.signals.includes(signal))&&(!term||(a.name+' '+a.segment+' '+a.summary+' '+a.signal).toLowerCase().includes(term)));
+      }
+      function selectAccount(id){selectedId=id;const a=accounts.find(x=>x.id===id);if(!a)return;const w=currentWeights();const sc=score(a);document.getElementById('account-detail').innerHTML=`<span class="card-kicker">${a.id} · ${a.region}</span><h3>${a.name}</h3><p>${a.summary}</p><div class="detail-fields"><div class="detail-field"><span>Segment</span><strong>${a.segment}</strong></div><div class="detail-field"><span>Company scale</span><strong>${a.employees} employees · illustrative band</strong></div><div class="detail-field"><span>Buying signal</span><strong>${a.signal}</strong></div><div class="detail-field"><span>Potential buying group</span><strong>${a.buyers}</strong></div><div class="detail-field"><span>Opportunity score</span><strong>${sc}/100 · Fit ${a.fit} / Intent ${a.intent} / Reach ${a.reach}</strong></div><div class="detail-field"><span>Suggested next action</span><strong>${a.next}</strong></div></div>`;document.querySelectorAll('.account-row').forEach(row=>row.setAttribute('aria-pressed',String(row.dataset.accountId===id)));}
+      function renderAccounts(){
+        const found=filteredAccounts().sort((a,b)=>score(b)-score(a));
+        document.getElementById('account-count').textContent=`${found.length} of ${accounts.length} accounts`;
+        const list=document.getElementById('account-list');
+        if(!found.length){list.innerHTML='<div class="demo-card"><h3>No matching accounts</h3><p>Change the filters or reset the view.</p></div>';document.getElementById('account-detail').innerHTML='<span class="card-kicker">Account profile</span><h3>No selection</h3><p>Adjust filters to see account records.</p>';return;}
+        list.innerHTML=found.map(a=>`<button class="account-row" type="button" data-account-id="${a.id}" aria-pressed="${a.id===selectedId}"><span><strong>${a.name}</strong><small>${a.segment} · ${a.region}</small></span><span class="account-meta small-note">${a.signals.join(' / ')}</span><span class="score-pill">${score(a)}</span></button>`).join('');
+        list.querySelectorAll('[data-account-id]').forEach(row=>row.addEventListener('click',()=>selectAccount(row.dataset.accountId)));
+        selectAccount(found.some(a=>a.id===selectedId)?selectedId:found[0].id);
+      }
+      function renderSignals(){
+        const items=accounts.flatMap(a=>a.signals.map(type=>({a,type}))).sort((x,y)=>score(y.a)-score(x.a));
+        document.getElementById('signal-list').innerHTML=items.map(({a,type})=>`<button class="account-row" type="button" data-signal-account="${a.id}"><span><strong>${type} · ${a.name}</strong><small>${a.signalAge} · ${a.region}</small></span><span class="account-meta small-note">${a.signal}</span><span class="score-pill">${score(a)}</span></button>`).join('');
+        document.querySelectorAll('[data-signal-account]').forEach(b=>b.addEventListener('click',()=>{selectedId=b.dataset.signalAccount;document.getElementById('account-search').value='';document.getElementById('account-segment').value='all';document.getElementById('account-region').value='all';document.getElementById('account-signal').value='all';openModule('accounts');}));
+      }
+      function renderScores(){
+        const ordered=[...accounts].sort((a,b)=>score(b)-score(a));
+        document.getElementById('score-rows').innerHTML=ordered.map((a,i)=>`<tr><td>${i+1}</td><td><strong>${a.name}</strong><br><span class="muted">${a.segment} · ${a.region}</span></td><td>${a.fit}</td><td>${a.intent}</td><td>${a.reach}</td><td><strong>${score(a)}</strong></td></tr>`).join('');
+        const w=currentWeights();
+        document.getElementById('fit-value').textContent=Math.round(w.fit*100)+'%';
+        document.getElementById('intent-value').textContent=Math.round(w.intent*100)+'%';
+        document.getElementById('reach-value').textContent=Math.round(w.reach*100)+'%';
+        renderAccounts();
+      }
+      ['account-search','account-segment','account-region','account-signal'].forEach(id=>document.getElementById(id).addEventListener(id==='account-search'?'input':'change',renderAccounts));
+      document.getElementById('reset-filters').addEventListener('click',()=>{document.getElementById('account-search').value='';document.getElementById('account-segment').value='all';document.getElementById('account-region').value='all';document.getElementById('account-signal').value='all';renderAccounts();});
+      ['weight-fit','weight-intent','weight-reach'].forEach(id=>document.getElementById(id).addEventListener('input',renderScores));
+      renderOverview();renderSegments();renderAccounts();renderSignals();renderScores();
+    })();
+  </script>
+</body>
+</html>
